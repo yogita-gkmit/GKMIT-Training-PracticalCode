@@ -41,7 +41,7 @@ arrObj.sort((a,b)=>{
 	else return -1;
 	// return a[name].localeCompare(b.name)
 })
-console.log(arrObj);s
+console.log(arrObj);
 
 arrObj.sort((a,b)=>{
 	return a.number - b.number;
