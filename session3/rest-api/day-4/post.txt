@@ -1,0 +1,153 @@
+USER'S POST
+
+
+1. GET Posts
+
+Method: GET
+
+END-POINT: localhost:8585/posts
+
+STATUS CODE: 200
+
+body:{
+		
+}
+
+RESPONSE: {
+	
+	{ id:23450, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23451, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23452, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23453, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23454, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23455, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+
+}
+
+
+
+2. GET Post
+
+Method: GET
+
+END-POINT: localhost:8585/posts/:id
+
+STATUS CODE: 200
+params: id:23456
+body:{
+		
+}
+
+RESPONSE: {
+	
+	{ id:23456, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+}
+
+
+
+
+3. ADD Post
+
+Method: POST
+
+END-POINT: localhost:8585/posts
+
+STATUS CODE: 201
+body:{
+		{ name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+}
+
+RESPONSE: {
+
+	{ id:23456, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+}
+
+
+
+
+4. UPDATE Post
+
+Method: PUT
+
+END-POINT: localhost:8585/posts/:id
+
+STATUS CODE: 204
+
+body:{
+		{ id:23452, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+}
+
+RESPONSE: {
+
+}
+
+
+
+5. UPDATE Post
+
+Method: PATCH
+
+END-POINT: localhost:8585/posts/:id
+
+STATUS CODE: 204
+
+body:{
+		{ id:23452, name:'rtyui' }
+}
+
+RESPONSE: {
+
+}
+
+
+
+
+6. DELETE Post
+
+Method: DELETE
+
+END-POINT: localhost:8585/posts/:id
+
+STATUS CODE: 200
+
+body:{
+		
+
+}
+
+RESPONSE: {
+
+}
+
+
+
+TO FETCH ALL POSTS OF THE PARTICULAR DATE OR TIME  (Startdate---Enddate)
+
+End-point ==> localhost:8585/posts?startDate=13-09-2024&endDate=14-09-2024
+
+
+
+TO FETCH ALL POSTS OF THE PARTICULAR DATE OR TIME  (Startdate---Enddate)
+
+End-point ==> localhost:8585/users/:id/posts?startDate=13-09-2024&endDate=14-09-2024&page=5&limit=15
+
+Method: GET
+
+STATUS CODE: 200
+
+body:{
+
+
+}
+
+RESPONSE: [
+	{ id:23450, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23451, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23452, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23453, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23454, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ id:23455, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	
+]
+
+
