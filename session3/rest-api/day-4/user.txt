@@ -4,7 +4,7 @@ USER
 
 Method: GET
 
-END-POINT: localhost:8585/users
+END-POINT: http://localhost:8585/users
 
 STATUS CODE: 200
 
@@ -14,12 +14,12 @@ body:{
 
 RESPONSE: {
 	
-	{ id:23450, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23451, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23452, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23453, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23454, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23455, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ "id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23451, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" }
+	{ "id":23452, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23453, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23454, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23455, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" }
 
 }
 
@@ -30,18 +30,17 @@ RESPONSE: {
 
 Method: GET
 
-END-POINT: localhost:8585/users/:id
+END-POINT: http://localhost:8585/users/:id
 
 STATUS CODE: 200
 
 body:{
-	id:23450	
+	"id":23450	
 }
 
 RESPONSE: {
 	
-	{ id:23450, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-
+	"id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" 
 }
 
 
@@ -49,17 +48,17 @@ RESPONSE: {
 
 Method: POST
 
-END-POINT: localhost:8585/users/:id
+END-POINT: http://localhost:8585/users/:id
 
 STATUS CODE: 201
 
 body:{
-	{ name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }	
+	"name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"	
 }
 
 RESPONSE: {
 	
-	{ id:23450, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	"id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
 
 }
 
@@ -69,12 +68,12 @@ RESPONSE: {
 
 Method: PUT
 
-END-POINT: localhost:8585/users/:id
+END-POINT: http://localhost:8585/users/:id
 
 STATUS CODE: 204
 
 body:{
-	{ id:23450, name:'rtyui', image: pic.jpeg, email: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }	
+	"id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
 }
 
 RESPONSE: {
@@ -88,12 +87,12 @@ RESPONSE: {
 
 Method: PATCH
 
-END-POINT: localhost:8585/users/:id
+END-POINT: http://localhost:8585/users/:id
 
 STATUS CODE: 204
 
 body:{
-	{ id:23450, name:'rtyui' }	
+	"id":23450, "name":"rtyui"	
 }
 
 RESPONSE: {
@@ -111,7 +110,7 @@ RESPONSE: object of the particular data of the particular user
 
 Method: DELETE
 
-END-POINT: localhost:8585/users/:id
+END-POINT: http://localhost:8585/users/:id
 
 STATUS CODE: 200
 

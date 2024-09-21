@@ -5,7 +5,7 @@ USER'S POST
 
 Method: GET
 
-END-POINT: localhost:8585/posts
+END-POINT: http://http://localhost:8585/posts
 
 STATUS CODE: 200
 
@@ -13,16 +13,18 @@ body:{
 		
 }
 
-RESPONSE: {
+RESPONSE:
+[
 	
-	{ id:23450, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23451, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23452, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23453, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23454, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23455, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ "id":23450, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23451, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23452, "name":'rtyui', "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23453, "name":'rtyui', "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23454, "name":'rtyui', "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23455, "name":'rtyui', "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" }
 
-}
+]
+
 
 
 
@@ -30,17 +32,17 @@ RESPONSE: {
 
 Method: GET
 
-END-POINT: localhost:8585/posts/:id
+END-POINT: http://localhost:8585/posts/:id
 
 STATUS CODE: 200
-params: id:23456
+params: "id":23456
 body:{
 		
 }
 
 RESPONSE: {
 	
-	{ id:23456, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	"id":23456, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
 }
 
 
@@ -50,16 +52,16 @@ RESPONSE: {
 
 Method: POST
 
-END-POINT: localhost:8585/posts
+END-POINT: http://localhost:8585/posts
 
 STATUS CODE: 201
 body:{
-		{ name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+		"name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
 }
 
 RESPONSE: {
 
-	{ id:23456, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	"id":23456, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
 }
 
 
@@ -69,12 +71,12 @@ RESPONSE: {
 
 Method: PUT
 
-END-POINT: localhost:8585/posts/:id
+END-POINT: http://localhost:8585/posts/:id
 
 STATUS CODE: 204
 
 body:{
-		{ id:23452, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+		"id":23452, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
 }
 
 RESPONSE: {
@@ -87,12 +89,12 @@ RESPONSE: {
 
 Method: PATCH
 
-END-POINT: localhost:8585/posts/:id
+END-POINT: http://localhost:8585/posts/:id
 
 STATUS CODE: 204
 
 body:{
-		{ id:23452, name:'rtyui' }
+		"id":23452, "name":"rtyui"
 }
 
 RESPONSE: {
@@ -106,7 +108,7 @@ RESPONSE: {
 
 Method: DELETE
 
-END-POINT: localhost:8585/posts/:id
+END-POINT: http://localhost:8585/posts/:id
 
 STATUS CODE: 200
 
@@ -123,13 +125,13 @@ RESPONSE: {
 
 TO FETCH ALL POSTS OF THE PARTICULAR DATE OR TIME  (Startdate---Enddate)
 
-End-point ==> localhost:8585/posts?startDate=13-09-2024&endDate=14-09-2024
+End-point ==> http://localhost:8585/posts?startDate=13-09-2024&endDate=14-09-2024
 
 
 
 TO FETCH ALL POSTS OF THE PARTICULAR DATE OR TIME  (Startdate---Enddate)
 
-End-point ==> localhost:8585/users/:id/posts?startDate=13-09-2024&endDate=14-09-2024&page=5&limit=15
+End-point ==> http://localhost:8585/users/:id/posts?startDate=13-09-2024&endDate=14-09-2024&page=5&limit=15
 
 Method: GET
 
@@ -141,12 +143,12 @@ body:{
 }
 
 RESPONSE: [
-	{ id:23450, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23451, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23452, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23453, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23454, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
-	{ id:23455, name:'rtyui', image: pic.jpeg, description: 'ertyuivbnfghjj erty xcvgbh rtyubv vbn' }
+	{ "id":23450, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn",
+	{ "id":23451, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn",
+	{ "id":23452, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn",
+	{ "id":23453, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn",
+	{ "id":23454, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn",
+	{ "id":23455, "name":"rtyui", "image": "pic.jpeg", "description": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
 	
 ]
 
