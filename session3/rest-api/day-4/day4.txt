@@ -1,0 +1,29 @@
+USERS
+
+
+URL path
+
+1. GET
+localhost:8585/users
+localhost:8585/users/:id
+
+
+2. POST
+localhost:8585/users/:id
+
+3. PUT
+localhost:8585/users/:id
+
+4. DELETE
+localhost:8585/users/:id
+
+
+5. addresses
+localhost:8585/users/:id/address
+
+
+
+
+
+
+

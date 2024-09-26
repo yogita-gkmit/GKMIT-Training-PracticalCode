@@ -1,0 +1,132 @@
+USER
+
+1. GET Users
+
+Method: GET
+
+END-POINT: http://localhost:8585/users
+
+STATUS CODE: 200
+
+body:{
+		
+}
+
+RESPONSE: {
+	
+	{ "id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23451, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" }
+	{ "id":23452, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23453, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23454, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" },
+	{ "id":23455, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" }
+
+}
+
+
+
+
+2. GET User
+
+Method: GET
+
+END-POINT: http://localhost:8585/users/:id
+
+STATUS CODE: 200
+
+body:{
+	"id":23450	
+}
+
+RESPONSE: {
+	
+	"id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn" 
+}
+
+
+3. ADD User
+
+Method: POST
+
+END-POINT: http://localhost:8585/users/:id
+
+STATUS CODE: 201
+
+body:{
+	"name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"	
+}
+
+RESPONSE: {
+	
+	"id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
+
+}
+
+
+
+4. UPDATE User
+
+Method: PUT
+
+END-POINT: http://localhost:8585/users/:id
+
+STATUS CODE: 204
+
+body:{
+	"id":23450, "name":"rtyui", "image": "pic.jpeg", "email": "ertyuivbnfghjj erty xcvgbh rtyubv vbn"
+}
+
+RESPONSE: {
+	
+
+}
+
+
+
+5. UPDATE User
+
+Method: PATCH
+
+END-POINT: http://localhost:8585/users/:id
+
+STATUS CODE: 204
+
+body:{
+	"id":23450, "name":"rtyui"	
+}
+
+RESPONSE: {
+	
+
+}
+
+SAMPLE-PAYLOAD: For a post id will be the sample payload AND name OR image OR username OR address
+
+RESPONSE: object of the particular data of the particular user
+
+
+
+6. DELETE User
+
+Method: DELETE
+
+END-POINT: http://localhost:8585/users/:id
+
+STATUS CODE: 200
+
+body:{
+
+}
+
+RESPONSE: {
+	
+}
+
+SAMPLE-PAYLOAD: For a user, id will be the sample payload
+
+RESPONSE: that object will be deleted from the array of objects
+
+
+
+
+
