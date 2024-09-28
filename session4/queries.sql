@@ -49,3 +49,69 @@ group by "InvoiceDate";
 -- in this query, invoicedate is filtering out on the basis of invoicedate from 1 jan 2009 to 31 march 2009 
 -- and the count of duplicate invoiceDates and sum of total which have same invoiceDate
 
+
+
+select 
+	Extract(month from "InvoiceDate"),
+    count("InvoiceDate"), 
+    sum("Total")
+from "Invoice"
+where 
+	"InvoiceDate">='Jan 01 2009' and "InvoiceDate"<'Apr 01 2009'
+group by 
+	Extract(month from "InvoiceDate");
+  
+
+
+select 
+	t1."Name", pl."Name"
+from "Track" t1 inner join "PlaylistTrack" pt
+	on t1."TrackId" = pt."TrackId"
+ inner join "Playlist" pl
+on pt."PlaylistId" = pl."PlaylistId" order by  pl."Name" desc; 
+
+
+
+select 
+	count(t1."Name") as "TrackCount", 
+  	pl."Name"
+from "Track" t1 
+inner join "PlaylistTrack" pt on 
+			t1."TrackId" = pt."TrackId"
+inner join "Playlist" pl on 
+    	pt."PlaylistId" = pl."PlaylistId" 
+group by  
+		pl."Name"
+order by 
+		"TrackCount" desc;
+
+select 
+	count(t1."Name") as "TrackCount", 
+	pl."Name"
+from "Track" t1 
+inner join "PlaylistTrack" pt on 
+			t1."TrackId" = pt."TrackId"
+inner join "Playlist" pl on 
+    	pt."PlaylistId" = pl."PlaylistId" 
+group by  
+		pl."Name"
+having 
+		count(t1."Name")>'100'
+order by 
+		"TrackCount" desc; 
+
+
+
+select 
+	"Name", 
+    (
+      select 
+     	count("TrackId") 
+     from 
+      	"PlaylistTrack" pt
+      where 
+      	pt."PlaylistId"=pl."PlaylistId"
+    ) as "PlayCount"
+from
+	"Playlist" pl;
+
