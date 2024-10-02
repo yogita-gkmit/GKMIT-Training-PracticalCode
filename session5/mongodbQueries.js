@@ -166,3 +166,9 @@ db.movies.find({$and:[{$or:[{rated:'NOT RATED'}, {type:'movie'}, {year:1956}]}]}
 
 Remove (remove is depricated, we should use deleteOne, deleteMany)
 db.users.remove({_id:ObjectId('66fa795258a005ce88964035')})
+
+
+
+
+
+
