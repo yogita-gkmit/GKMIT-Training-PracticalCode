@@ -31,7 +31,7 @@ ZCOUNT score 250 600
 
 leaderboard:
 [
-	1. "leaderboard:player:add":"{"score":"200", "name":"Fred"}"
+	1. "leaderboard:player:add":"[{"score":"200", "name":"Fred"}]"
 	2. "leaderboard:display":"[{"score":"200", "name":"Fred"}, {"score":"100", "name":"Jacob"}, {"score":"300", "name":"Smith"}, {"score":"500", "name":"Alice"}]"
 	3. "leaderboard:<player_id>:score:incriment":"{"score":"800", "name":"Fred"}"
 	4. "leaderboard:<player_id>:rank":"3"
@@ -60,13 +60,16 @@ GEODIST locations "Palermo" "Catania" km
 4. Find all locations within 250 km of Rome
 GEORADIUS locations 12.496366 41.902783 250 km
 
+5. For hashing  the location
+GEOHASH 'Naples'
 
 geolocations:
 [
-	1. "location:add":"{"latitude":"13.361389", "longitude":"38.115556", "name":"Palermo"}"
+	1. "location:add":"[{"latitude":"13.361389", "longitude":"38.115556", "name":"Palermo"}]"
 	2. "location:<location_id>:position":"{"latitude":"12.496366", "longitude":"41.902783"}"
 	3. "location:<location1_id>:<location2_id>:distance":"166km"
 	4. "location:<location_id>:allLocations":"["Naples"]"
+	5. "location:<location_id>:hash":"asdfg23iuy57uj"
 ]
 
 
