@@ -1,0 +1,50 @@
+1. Singleton Pattern
+
+BAD CODE
+
+class Logger {
+    constructor(name, age){
+        console.log("Creating object");
+        this.logMessages = [];
+    }
+	
+
+	addMessage(message){
+		this.logMessages.push(message);
+		console.log(message);
+	}
+}
+
+const log = new Logger("abc", 12);
+log.addMessage("Hello World");
+log.addMessage("Hellooooo");
+log.addMessage("Worlddd");
+
+
+
+GOOD CODE
+let instance;
+
+class Logger {
+    constructor(name, age){
+        this.logMessages = [];
+        if(instance){
+            throw new Error("You can only create one instance"); 
+        }
+        instance = this;
+        
+    }
+	
+
+	addMessage(message){
+		this.logMessages.push(message);
+		console.log(message);
+	}
+}
+
+const log = new Logger("abc", 12);
+log.addMessage("Hello World");
+log.addMessage("Hellooooo");
+log.addMessage("Worlddd");
+const abc = new Logger("cde", 13);
+abc.addMessage("hii");
